@@ -38,6 +38,7 @@ class EnhancedXMLHttpRequest {
     /**
      * Gets the response.
      * 
+     * @param abortSignal An abort signal used for aborting.
      * @returns A promise that resolves to the response.
      * @throws An error if the request failed or not successful.
      */
