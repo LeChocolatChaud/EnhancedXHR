@@ -1,7 +1,7 @@
 /**
  * An easier way to use XMLHttpRequest
  */
-class EnhancedXMLHttpRequest {
+export class EnhancedXMLHttpRequest {
     url: string;
     method: string;
     headers: any;
@@ -38,7 +38,7 @@ class EnhancedXMLHttpRequest {
     /**
      * Gets the response.
      * 
-     * @param abortSignal An abort signal used for aborting.
+     * @param abortSignal An abort signal used for terminating the request.
      * @returns A promise that resolves to the response.
      * @throws An error if the request failed or not successful.
      */
@@ -87,13 +87,13 @@ class EnhancedXMLHttpRequest {
     }
 }
 
-class XMLRequestError extends DOMException {
+export class XMLRequestError extends DOMException {
     constructor(message: string) {
         super(message);
     }
 }
 
-class XMLRequestFailError extends XMLRequestError {
+export class XMLRequestFailError extends XMLRequestError {
     status: number;
 
     constructor(message: string, status: number) {
